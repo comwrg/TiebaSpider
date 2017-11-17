@@ -1,0 +1,5 @@
+scrapy
+sqlalchemy
+BeautifulSoup4
+pyyaml
+mysql-connector-python-rf

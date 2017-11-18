@@ -22,7 +22,6 @@ class mysql(object):
                                )
         self.session_factory = sessionmaker(bind=self.engine)
 
-        self.execute('SET NAMES utf8mb4')
         self.create_database(database)
         self.use_database(database)
         Base.metadata.create_all(self.engine)

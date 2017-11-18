@@ -20,8 +20,7 @@ class mysql(object):
                                echo=False,
                                )
         self.session_factory = sessionmaker(bind=engine)
-        session = self.session()
-        session.execute('SET NAMES utf8mb4')
+        self.execute('SET NAMES utf8mb4')
         Base.metadata.create_all(engine)
 
     def session(self):
@@ -37,3 +36,11 @@ class mysql(object):
         finally:
             session.close()
 
+    def execute(self, s):
+        session = self.session()
+        try:
+            session.execute(s)
+        except:
+            raise
+        finally:
+            session.close()

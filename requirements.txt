@@ -2,4 +2,6 @@ scrapy
 sqlalchemy
 BeautifulSoup4
 pyyaml
+# if mysql-connector-python-rf cant install
+# try mysql-connector-python
 mysql-connector-python-rf
